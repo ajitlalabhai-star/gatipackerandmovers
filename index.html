@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gati Packer and Movers</title>
+<title>Gati Express Packers and Movers</title>
 
 <style>
 body {
@@ -22,15 +22,15 @@ header {
 }
 
 header img {
-  width: 400px;
+  width: 90px;
+  margin-right: 15px;
 }
 
 header h1 {
-  margin-left: 20px;
-  font-size: 32px;
+  font-size: 34px;
 }
 
-/* NAV */
+/* NAVBAR */
 nav {
   background: #0b3d91;
   padding: 12px;
@@ -44,34 +44,36 @@ nav a {
   font-weight: bold;
 }
 
-/* HERO SECTION */
+/* HERO */
 .hero {
   display: flex;
-  height: 400px;
+  height: 350px;
+}
+
+.hero-left, .hero-right {
+  width: 50%;
+  position: relative;
 }
 
 .hero img {
-  width: 50%;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
 .hero-text {
   position: absolute;
-  width: 100%;
-  text-align: center;
-  top: 45%;
-  color: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background: rgba(0,0,0,0.6);
   padding: 20px;
+  color: white;
+  text-align: center;
 }
 
 .hero-text h1 {
-  font-size: 40px;
-  margin: 0;
-}
-
-.hero-text p {
-  font-size: 18px;
+  font-size: 38px;
 }
 
 /* SECTION */
@@ -81,24 +83,20 @@ section {
 }
 
 /* SERVICES */
-.services {
-  background: white;
-}
-
 .service-box {
-  margin: 20px auto;
-  padding: 20px;
-  border-radius: 10px;
   background: #eee;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px;
   border-left: 5px solid orange;
-  width: 80%;
 }
 
 .service-box img {
-  width: 300px;
-  height: 200px;
+  width: 100%;
+  max-width: 500px;
+  height: 300px;
   object-fit: cover;
-  border-radius: 10px;
+  margin-top: 15px;
 }
 
 /* FORM */
@@ -132,7 +130,7 @@ footer {
 
 <header>
   <img src="logo.jpeg">
-  <h1>Gati Express Packer and Movers</h1>
+  <h1>Gati Express Packers and Movers</h1>
 </header>
 
 <nav>
@@ -143,81 +141,113 @@ footer {
 
 <!-- HERO -->
 <div class="hero">
-  <img src="office.jpg">
-  <img src="truck.jpeg">
 
-  <div class="hero-text">
-    <h1>Gati Express Packer and Movers</h1>
-    <p>Safe & Reliable Relocation Services</p>
+  <div class="hero-left">
+    <img src="office.jpeg">
   </div>
+
+  <div class="hero-right">
+    <img src="truck.jpeg">
+    <div class="hero-text">
+      <h1>Gati Express Packers and Movers</h1>
+      <p>Safe & Reliable Relocation Services</p>
+    </div>
+  </div>
+
 </div>
 
+<!-- ABOUT -->
 <section>
   <h2>About Us</h2>
   <p>
-  Gati Packer and Movers is one of the most trusted relocation companies in India. 
+  Gati Packers and Movers is one of the most trusted relocation companies in India. 
   We provide professional household shifting, office relocation, car transportation 
-  and storage services with complete safety and reliability.
+  and storage services with complete safety and reliability. Our experienced team 
+  ensures that every item is packed and transported with utmost care.
   </p>
 </section>
 
-<section class="services">
-  <h2>Our Services</h2>
+<!-- SERVICES -->
+<section>
 
   <div class="service-box">
     <h3>Household Shifting</h3>
-    <img src="household.jfif"><br><br>
-    Safe home shifting with expert packing and transport.
+    <img src="household.jfif">
+    <p>Safe home shifting with expert packing and transport.</p>
   </div>
 
   <div class="service-box">
     <h3>Office Relocation</h3>
-    <img src="office.jpg"><br><br>
-    Fast and secure office shifting with minimal downtime.
+    <img src="office-relocation.jpg">
+    <p>Fast and secure office shifting with minimal downtime.</p>
   </div>
 
   <div class="service-box">
     <h3>Car Transportation</h3>
-    <img src="car.jfif"><br><br>
-    Safe car delivery using carriers.
+    <img src="car.jfif">
+    <p>Secure vehicle transport with full safety assurance.</p>
   </div>
 
   <div class="service-box">
     <h3>Storage Service</h3>
-    <img src="storage.jfif"><br><br>
-    Secure warehouse storage facility.
+    <img src="storage.jfif">
+    <p>Safe and reliable storage solutions for your goods.</p>
   </div>
 
 </section>
 
+<!-- WHY CHOOSE US -->
 <section>
-  <h2>Get Your Quotation</h2>
+  <h2>Why Choose Us</h2>
+  <p>✔ Experienced Team</p>
+  <p>✔ Safe Packing</p>
+  <p>✔ Affordable Price</p>
+  <p>✔ On-Time Delivery</p>
+  <p>✔ 24/7 Support</p>
+</section>
+
+<!-- REVIEWS -->
+<section>
+  <h2>Customer Reviews</h2>
+
+  <p>⭐ Excellent service, very safe shifting – Rahul</p>
+  <p>⭐ Affordable and fast service – Amit</p>
+  <p>⭐ Highly professional team – Neha</p>
+  <p>⭐ Best packers in Noida – Suresh</p>
+  <p>⭐ Smooth relocation experience – Priya</p>
+  <p>⭐ Safe car transport – Rohan</p>
+  <p>⭐ Good packing quality – Ankit</p>
+  <p>⭐ On-time delivery – Kavita</p>
+  <p>⭐ Reliable service – Deepak</p>
+  <p>⭐ Highly recommended – Sunita</p>
+
+</section>
+
+<!-- FORM -->
+<section>
+  <h2>Get Quote</h2>
 
   <form onsubmit="sendToWhatsApp(); return false;">
-    
     <input type="text" id="name" placeholder="Your Name" required><br><br>
-    
     <input type="tel" id="phone" placeholder="Contact Number" required><br><br>
-    
     <input type="text" id="pickup" placeholder="Pickup Location" required><br><br>
-    
     <input type="text" id="destination" placeholder="Destination" required><br><br>
-    
     <input type="text" id="luggage" placeholder="Luggage Type" required><br><br>
 
     <button type="submit">Get Quote on WhatsApp</button>
-
   </form>
 </section>
 
+<!-- CONTACT -->
 <section>
   <h2>Contact Us</h2>
   <p>📞 8810221233</p>
   <p>📍 Noida Sector 62</p>
+  <p>📧 gatiexpress@email.com</p>
 </section>
 
 <footer>
-  <p>© 2026 Gati Packer and Movers</p>
+  <p>© 2026 Gati Packers and Movers</p>
 </footer>
 
 <script>
