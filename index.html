@@ -8,22 +8,20 @@
 <style>
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: Arial;
   background: #f5f5f5;
 }
 
 /* HEADER */
 header {
   background: black;
-  color: white;
-  display: flex;
-  align-items: center;
-  padding: 15px 30px;
+  padding: 0;
 }
 
 header img {
-  width: 400px;
-  margin-right: 20px;
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
 }
 
 /* NAVBAR */
@@ -41,10 +39,26 @@ nav a {
 }
 
 /* BANNER */
+.banner {
+  position: relative;
+}
+
 .banner img {
   width: 100%;
-  height: 350px;
+  height: 400px;
   object-fit: cover;
+}
+
+.banner-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  background: rgba(0,0,0,0.6);
+  padding: 20px 40px;
+  border-radius: 10px;
+  text-align: center;
 }
 
 /* SECTION */
@@ -59,12 +73,12 @@ section {
 }
 
 .service-box {
-  margin: 25px auto;
+  margin: 20px auto;
   padding: 20px;
   border-radius: 10px;
   background: #eee;
   border-left: 5px solid orange;
-  max-width: 700px;
+  width: 80%;
 }
 
 .service-box img {
@@ -73,13 +87,14 @@ section {
   height: 300px;
   object-fit: cover;
   border-radius: 10px;
+  margin-bottom: 15px;
 }
 
 /* FORM */
 input {
-  width: 260px;
+  width: 250px;
   padding: 10px;
-  margin: 8px;
+  margin: 5px;
 }
 
 /* BUTTON */
@@ -104,115 +119,96 @@ footer {
 
 <body>
 
+<!-- HEADER (Office Image) -->
 <header>
-  <img src="logo.jpeg">
-  <h1>Gati Packer and Movers</h1>
+  <img src="office.jpeg">
 </header>
 
+<!-- NAV -->
 <nav>
   <a href="#">Home</a>
   <a href="#">Services</a>
   <a href="#">Contact</a>
 </nav>
 
+<!-- BANNER -->
 <div class="banner">
   <img src="truck.jpeg">
+
+  <div class="banner-text">
+    <h1>Gati Packer and Movers</h1>
+    <p>Safe & Reliable Relocation Services</p>
+  </div>
 </div>
 
+<!-- ABOUT -->
 <section>
   <h2>About Gati Packer and Movers</h2>
   <p>
-  Gati Packer and Movers is one of the most trusted and reliable relocation service providers in India. We specialize in offering complete packing and moving solutions for residential, commercial, and industrial needs. Our mission is to deliver safe, affordable, and hassle-free relocation services to our customers. Our experienced team ensures that every item is packed and transported with the highest level of care and professionalism.
+  Gati Packer and Movers is one of the most trusted relocation service providers in India. We provide safe, fast, and reliable shifting services including household shifting, office relocation, and vehicle transportation.
   </p>
 </section>
 
+<!-- SERVICES -->
 <section class="services">
   <h2>Our Services</h2>
 
   <div class="service-box">
-    <img src="household.jfif"><br><br>
-    <b>Household Shifting</b>
+    <img src="household.jfif">
+    <h3>Household Shifting</h3>
+    <p>Safe packing and relocation of all household items.</p>
   </div>
 
   <div class="service-box">
-    <img src="truck.jfif"><br><br>
-    <b>Transport Service</b>
+    <img src="office.jpeg">
+    <h3>Office Relocation</h3>
+    <p>Professional office shifting with zero downtime.</p>
   </div>
 
   <div class="service-box">
-    <img src="car.jfif"><br><br>
-    <b>Car Transportation</b>
+    <img src="truck.jpeg">
+    <h3>Transport Service</h3>
+    <p>Reliable truck transport for goods and materials.</p>
   </div>
 
   <div class="service-box">
-    <img src="storage.jfif"><br><br>
-    <b>Storage Service</b>
+    <img src="storage.jfif">
+    <h3>Storage Service</h3>
+    <p>Secure storage solutions for short and long term.</p>
   </div>
 
   <div class="service-box">
-    <img src="house.jfif"><br><br>
-    <b>Home Shifting</b>
+    <img src="car.jfif">
+    <h3>Car Transportation</h3>
+    <p>Safe and damage-free car shifting service.</p>
   </div>
 
 </section>
 
-<section>
-  <h2>Why Choose Us</h2>
-  <ul style="text-align:left; max-width:600px; margin:auto;">
-    <li>✔️ Experienced Team</li>
-    <li>✔️ Safe Packing</li>
-    <li>✔️ Affordable Price</li>
-    <li>✔️ On Time Delivery</li>
-    <li>✔️ 24/7 Support</li>
-    <li>✔️ No Hidden Charges</li>
-  </ul>
-</section>
-
-<section style="background:#fff;">
-  <h2>Customer Reviews</h2>
-
-  <div class="service-box">⭐⭐⭐⭐⭐ Excellent service - Rahul Sharma</div>
-  <div class="service-box">⭐⭐⭐⭐⭐ Safe shifting - Amit Kumar</div>
-  <div class="service-box">⭐⭐⭐⭐⭐ On-time delivery - Neha Singh</div>
-  <div class="service-box">⭐⭐⭐⭐⭐ Best service - Rohit Verma</div>
-  <div class="service-box">⭐⭐⭐⭐⭐ Affordable - Priya Mehta</div>
-  <div class="service-box">⭐⭐⭐⭐⭐ Smooth shifting - Sandeep Gupta</div>
-  <div class="service-box">⭐⭐⭐⭐⭐ Fast service - Anjali Sharma</div>
-  <div class="service-box">⭐⭐⭐⭐⭐ Great team - Vikash Yadav</div>
-  <div class="service-box">⭐⭐⭐⭐⭐ Happy customer - Pooja Verma</div>
-  <div class="service-box">⭐⭐⭐⭐⭐ Highly recommended - Deepak Singh</div>
-
-</section>
-
+<!-- FORM -->
 <section>
   <h2>Get Your Quotation</h2>
 
   <form onsubmit="sendToWhatsApp(); return false;">
-    <input type="text" id="name" placeholder="Your Name" required><br>
-    <input type="tel" id="phone" placeholder="Contact Number" required><br>
-    <input type="text" id="pickup" placeholder="Pickup Location" required><br>
-    <input type="text" id="destination" placeholder="Destination" required><br>
-    <input type="text" id="luggage" placeholder="Luggage Type" required><br>
+    <input type="text" id="name" placeholder="Your Name" required><br><br>
+    <input type="tel" id="phone" placeholder="Contact Number" required><br><br>
+    <input type="text" id="pickup" placeholder="Pickup Location" required><br><br>
+    <input type="text" id="destination" placeholder="Destination" required><br><br>
+    <input type="text" id="luggage" placeholder="Luggage Type" required><br><br>
 
     <button type="submit">Get Quote on WhatsApp</button>
   </form>
 </section>
 
+<!-- CONTACT -->
 <section>
   <h2>Contact Us</h2>
   <p>📞 8810221233</p>
   <p>📍 Noida Sector 62</p>
-
-  <iframe 
-    src="https://www.google.com/maps?q=Noida%20Sector%2062&output=embed"
-    width="100%" 
-    height="300" 
-    style="border:0;">
-  </iframe>
 </section>
 
 <footer>
-  <p>© 2026 Gati Packer and Movers | All Rights Reserved</p>
+  <p>© 2026 Gati Packer and Movers</p>
 </footer>
 
 <script>
@@ -223,16 +219,14 @@ function sendToWhatsApp() {
   var destination = document.getElementById("destination").value;
   var luggage = document.getElementById("luggage").value;
 
-  var message = "New Quotation Request:%0A"
+  var message = "New Quotation:%0A"
     + "Name: " + name + "%0A"
     + "Phone: " + phone + "%0A"
     + "Pickup: " + pickup + "%0A"
     + "Destination: " + destination + "%0A"
     + "Luggage: " + luggage;
 
-  var whatsappURL = "https://wa.me/918810221233?text=" + message;
-
-  window.open(whatsappURL, "_blank");
+  window.open("https://wa.me/918810221233?text=" + message, "_blank");
 }
 </script>
 
