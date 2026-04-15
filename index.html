@@ -22,8 +22,8 @@ header {
 }
 
 header img {
-  width: 120px;
-  margin-right: 15px;
+  width: 400px;
+  margin-right: 20px;
 }
 
 /* NAVBAR */
@@ -43,7 +43,7 @@ nav a {
 /* BANNER */
 .banner img {
   width: 100%;
-  height: 300px;
+  max-height: 400px;
   object-fit: cover;
 }
 
@@ -59,18 +59,25 @@ section {
 }
 
 .service-box {
-  margin: 15px;
+  margin: 25px auto;
   padding: 20px;
   border-radius: 10px;
   background: #eee;
   border-left: 5px solid orange;
+  max-width: 700px;
+}
+
+.service-box img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 10px;
 }
 
 /* FORM */
 input {
-  width: 250px;
+  width: 260px;
   padding: 10px;
-  margin: 5px;
+  margin: 8px;
 }
 
 /* BUTTON */
@@ -81,6 +88,11 @@ button {
   color: white;
   border-radius: 30px;
   cursor: pointer;
+}
+
+/* MAP */
+.map {
+  margin-top: 20px;
 }
 
 /* FOOTER */
@@ -107,17 +119,13 @@ footer {
 </nav>
 
 <div class="banner">
-  <img src="truck.jpeg">
+  <img src="truck.jfif">
 </div>
 
 <section>
   <h2>About Gati Packer and Movers</h2>
   <p>
-  Gati Packer and Movers is one of the most trusted and reliable relocation service providers in India. With years of experience in the logistics and transportation industry, we have built a strong reputation for delivering safe, efficient, and cost-effective moving solutions. Our company specializes in household shifting, office relocation, car transportation, and complete packing and moving services. We understand that moving can be stressful, which is why we focus on making the entire process smooth and hassle-free for our customers.
-  
-  Our team consists of highly trained professionals who are dedicated to providing top-quality service. We use modern packing materials, advanced handling techniques, and secure transportation methods to ensure that your belongings reach their destination safely. Customer satisfaction is our top priority, and we strive to exceed expectations with every move.
-  
-  Whether you are moving locally or across the country, Gati Packer and Movers is your trusted partner. We offer customized solutions tailored to your specific needs and budget, ensuring a seamless relocation experience.
+  Gati Packer and Movers is one of the most trusted and reliable relocation service providers in India...
   </p>
 </section>
 
@@ -125,48 +133,43 @@ footer {
   <h2>Our Services</h2>
 
   <div class="service-box">
-    Household Shifting: We provide safe and secure household relocation services. Our team carefully packs, loads, transports, and unloads your belongings with utmost care.
+    <img src="household.jfif"><br><br>
+    <b>Household Shifting</b>
   </div>
 
   <div class="service-box">
-    Office Relocation: We offer efficient office shifting services with minimal downtime. Our experts handle office equipment, furniture, and documents professionally.
+    <img src="truck.jfif"><br><br>
+    <b>Transport Service</b>
   </div>
 
   <div class="service-box">
-    Car Transportation: We ensure safe and timely vehicle transportation using specialized carriers.
+    <img src="car.jfif"><br><br>
+    <b>Car Transportation</b>
   </div>
 
   <div class="service-box">
-    Packing & Moving: Complete end-to-end solutions including packing, loading, transportation, unloading, and unpacking.
+    <img src="storage.jfif"><br><br>
+    <b>Storage Service</b>
   </div>
-</section>
 
-<section>
-  <h2>Why Choose Us</h2>
-  <p>
-  Choosing the right packers and movers is crucial for a stress-free relocation. At Gati Packer and Movers, we stand out due to our commitment to quality, reliability, and customer satisfaction. We provide affordable services with transparent pricing and no hidden charges. Our experienced staff ensures safe handling of goods and timely delivery.
-  
-  We offer 24/7 customer support and keep our clients informed throughout the moving process. Our use of high-quality packing materials and modern transportation ensures maximum safety of your belongings.
-  </p>
+  <div class="service-box">
+    <img src="house.jfif"><br><br>
+    <b>Home Shifting</b>
+  </div>
+
 </section>
 
 <section>
   <h2>Get Your Quotation</h2>
 
   <form onsubmit="sendToWhatsApp(); return false;">
-    
-    <input type="text" id="name" placeholder="Your Name" required><br><br>
-    
-    <input type="tel" id="phone" placeholder="Contact Number" required><br><br>
-    
-    <input type="text" id="pickup" placeholder="Pickup Location" required><br><br>
-    
-    <input type="text" id="destination" placeholder="Destination" required><br><br>
-    
-    <input type="text" id="luggage" placeholder="Luggage Type" required><br><br>
+    <input type="text" id="name" placeholder="Your Name" required><br>
+    <input type="tel" id="phone" placeholder="Contact Number" required><br>
+    <input type="text" id="pickup" placeholder="Pickup Location" required><br>
+    <input type="text" id="destination" placeholder="Destination" required><br>
+    <input type="text" id="luggage" placeholder="Luggage Type" required><br>
 
     <button type="submit">Get Quote on WhatsApp</button>
-
   </form>
 </section>
 
@@ -174,7 +177,17 @@ footer {
   <h2>Contact Us</h2>
   <p>📞 8810221233</p>
   <p>📍 Noida Sector 62</p>
-  <p>📧 gatiexpress@email.com</p>
+
+  <!-- GOOGLE MAP -->
+  <div class="map">
+    <iframe 
+      src="https://www.google.com/maps?q=Noida%20Sector%2062&output=embed"
+      width="100%" 
+      height="300" 
+      style="border:0;">
+    </iframe>
+  </div>
+
 </section>
 
 <footer>
