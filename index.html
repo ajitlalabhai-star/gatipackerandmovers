@@ -15,16 +15,22 @@ body {
 /* HEADER */
 header {
   background: black;
-  padding: 0;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 15px 30px;
 }
 
 header img {
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
+  width: 400px;
 }
 
-/* NAVBAR */
+header h1 {
+  margin-left: 20px;
+  font-size: 32px;
+}
+
+/* NAV */
 nav {
   background: #0b3d91;
   padding: 12px;
@@ -38,27 +44,34 @@ nav a {
   font-weight: bold;
 }
 
-/* BANNER */
-.banner {
-  position: relative;
+/* HERO SECTION */
+.hero {
+  display: flex;
+  height: 400px;
 }
 
-.banner img {
-  width: 100%;
-  height: 400px;
+.hero img {
+  width: 50%;
   object-fit: cover;
 }
 
-.banner-text {
+.hero-text {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+  top: 45%;
   color: white;
   background: rgba(0,0,0,0.6);
-  padding: 20px 40px;
-  border-radius: 10px;
-  text-align: center;
+  padding: 20px;
+}
+
+.hero-text h1 {
+  font-size: 40px;
+  margin: 0;
+}
+
+.hero-text p {
+  font-size: 18px;
 }
 
 /* SECTION */
@@ -82,12 +95,10 @@ section {
 }
 
 .service-box img {
-  width: 100%;
-  max-width: 600px;
-  height: 300px;
+  width: 300px;
+  height: 200px;
   object-fit: cover;
   border-radius: 10px;
-  margin-bottom: 15px;
 }
 
 /* FORM */
@@ -119,88 +130,86 @@ footer {
 
 <body>
 
-<!-- HEADER (Office Image) -->
 <header>
-  <img src="office.jpeg">
+  <img src="logo.jpeg">
+  <h1>Gati Express Packer and Movers</h1>
 </header>
 
-<!-- NAV -->
 <nav>
   <a href="#">Home</a>
   <a href="#">Services</a>
   <a href="#">Contact</a>
 </nav>
 
-<!-- BANNER -->
-<div class="banner">
+<!-- HERO -->
+<div class="hero">
+  <img src="office.jpg">
   <img src="truck.jpeg">
 
-  <div class="banner-text">
-    <h1>Gati Packer and Movers</h1>
+  <div class="hero-text">
+    <h1>Gati Express Packer and Movers</h1>
     <p>Safe & Reliable Relocation Services</p>
   </div>
 </div>
 
-<!-- ABOUT -->
 <section>
-  <h2>About Gati Packer and Movers</h2>
+  <h2>About Us</h2>
   <p>
-  Gati Packer and Movers is one of the most trusted relocation service providers in India. We provide safe, fast, and reliable shifting services including household shifting, office relocation, and vehicle transportation.
+  Gati Packer and Movers is one of the most trusted relocation companies in India. 
+  We provide professional household shifting, office relocation, car transportation 
+  and storage services with complete safety and reliability.
   </p>
 </section>
 
-<!-- SERVICES -->
 <section class="services">
   <h2>Our Services</h2>
 
   <div class="service-box">
-    <img src="household.jfif">
     <h3>Household Shifting</h3>
-    <p>Safe packing and relocation of all household items.</p>
+    <img src="household.jfif"><br><br>
+    Safe home shifting with expert packing and transport.
   </div>
 
   <div class="service-box">
-    <img src="office.jpeg">
     <h3>Office Relocation</h3>
-    <p>Professional office shifting with zero downtime.</p>
+    <img src="office.jpg"><br><br>
+    Fast and secure office shifting with minimal downtime.
   </div>
 
   <div class="service-box">
-    <img src="truck.jpeg">
-    <h3>Transport Service</h3>
-    <p>Reliable truck transport for goods and materials.</p>
-  </div>
-
-  <div class="service-box">
-    <img src="storage.jfif">
-    <h3>Storage Service</h3>
-    <p>Secure storage solutions for short and long term.</p>
-  </div>
-
-  <div class="service-box">
-    <img src="car.jfif">
     <h3>Car Transportation</h3>
-    <p>Safe and damage-free car shifting service.</p>
+    <img src="car.jfif"><br><br>
+    Safe car delivery using carriers.
+  </div>
+
+  <div class="service-box">
+    <h3>Storage Service</h3>
+    <img src="storage.jfif"><br><br>
+    Secure warehouse storage facility.
   </div>
 
 </section>
 
-<!-- FORM -->
 <section>
   <h2>Get Your Quotation</h2>
 
   <form onsubmit="sendToWhatsApp(); return false;">
+    
     <input type="text" id="name" placeholder="Your Name" required><br><br>
+    
     <input type="tel" id="phone" placeholder="Contact Number" required><br><br>
+    
     <input type="text" id="pickup" placeholder="Pickup Location" required><br><br>
+    
     <input type="text" id="destination" placeholder="Destination" required><br><br>
+    
     <input type="text" id="luggage" placeholder="Luggage Type" required><br><br>
 
     <button type="submit">Get Quote on WhatsApp</button>
+
   </form>
 </section>
 
-<!-- CONTACT -->
 <section>
   <h2>Contact Us</h2>
   <p>📞 8810221233</p>
@@ -219,14 +228,16 @@ function sendToWhatsApp() {
   var destination = document.getElementById("destination").value;
   var luggage = document.getElementById("luggage").value;
 
-  var message = "New Quotation:%0A"
+  var message = "New Quotation Request:%0A"
     + "Name: " + name + "%0A"
     + "Phone: " + phone + "%0A"
     + "Pickup: " + pickup + "%0A"
     + "Destination: " + destination + "%0A"
     + "Luggage: " + luggage;
 
-  window.open("https://wa.me/918810221233?text=" + message, "_blank");
+  var whatsappURL = "https://wa.me/918810221233?text=" + message;
+
+  window.open(whatsappURL, "_blank");
 }
 </script>
 
